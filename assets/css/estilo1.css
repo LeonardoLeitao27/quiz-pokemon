@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(87, 68, 104);
+}
+
+.container{
+    display: flex;
+    margin: 5% auto;
+    padding: 10px;
+    min-width: 150px;
+    min-height: 100px;
+    max-width: 420px;
+    max-height: 520px;
+    background-color: white;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz{
+    display: block;
+}
+
+.imgs1{
+    display: flex;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+h1{
+    margin: 5px;
+    text-align: center;
+}
+
+.botoes{
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+button{
+    display: flex;
+    margin: 0px auto;
+    background-color: rgb(60, 46, 71);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 0.5rem;
+}
+
+button:hover{
+    background-color: rgb(145, 111, 170);
+
+}
+
+footer{
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    width: 100%;
+}
+
+footer button{
+    background-color: white;
+    margin: 10px auto;
+}
+
+.footer-titulo{
+    padding: 15px;
+    font-size: 18px;
+    color: wheat;
+}
+
+.social-footer img{
+    min-width: 50px;
+    color: white;
+}
