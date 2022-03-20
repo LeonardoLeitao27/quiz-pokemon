@@ -78,6 +78,7 @@ function jogo(json)
     div_img.classList.add("imgs1");
 
     const img1 = document.createElement('img');
+    img1.classList.add("img");
     img1.src = imagem;
     div_img.appendChild(img1);
 
@@ -153,9 +154,55 @@ function jogo(json)
 
 
 function verificarResposta(certa, escolha){
+    const imagempokemon = document.querySelector('.imgs1');
+    const imagempokemon2 = document.querySelector('.img');
+    const titulo = document.querySelector('.titulo');
+    const botoes = document.querySelector('.botoes');
 
-    console.log(certa, escolha);
+    
+    botoes.parentNode.removeChild(botoes);
 
+    if(isEquivalent(certa, escolha)){
+        titulo.innerHTML = 'Correto';
+        imagempokemon2.src = './assets/img/bongo-cat.gif';
+
+        const btn_prosseguir = document.createElement('button');
+        btn_prosseguir.classList.add("resposta2");
+        btn_prosseguir.innerHTML = 'Próximo';
+        div_jogo.appendChild(btn_prosseguir);
+
+        btn_prosseguir.addEventListener("click", function () {
+            imagempokemon.parentNode.removeChild(imagempokemon);
+            titulo.parentNode.removeChild(titulo);
+
+
+            btn_prosseguir.parentNode.removeChild(btn_prosseguir);
+            chamaJogo();
+        });
+
+    }
+
+    if(!isEquivalent(certa, escolha)){
+        titulo.innerHTML = 'Resposta incorreta';
+        imagempokemon2.src = './assets/img/erro.gif';
+
+        const btn_prosseguir = document.createElement('button');
+        btn_prosseguir.classList.add("resposta2");
+        btn_prosseguir.innerHTML = 'Próximo';
+        div_jogo.appendChild(btn_prosseguir);
+
+        btn_prosseguir.addEventListener("click", function () {
+            imagempokemon.parentNode.removeChild(imagempokemon);
+            titulo.parentNode.removeChild(titulo);
+
+
+            btn_prosseguir.parentNode.removeChild(btn_prosseguir);
+            chamaJogo();
+        });
+
+    }
+
+    
 }
 
 
