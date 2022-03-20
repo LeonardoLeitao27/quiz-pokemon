@@ -1,0 +1,17 @@
+[
+  {
+    "pokemon": "Squirtle",
+    "img": "https://cdn.discordapp.com/attachments/955181072814067732/955182536772976650/1.jpg",
+    "errada": "Squartou",
+    "errada2": "Squirtou",
+    "errada3": "Squirtleou"
+  },
+  {
+    "pokemon": "Charmander",
+    "img": "https://cdn.discordapp.com/attachments/955181072814067732/955183735643451432/2.jpg",
+    "errada": "Charizard",
+    "errada2": "Char",
+    "errada3": "Charmilion"
+  }
+  
+]
