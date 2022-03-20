@@ -68,10 +68,6 @@ function jogo(json)
 
     shuffleArray(ordembotoes);
 
-    console.log(ordembotoes); 
-    console.log(imagem); 
-    
-
     //pokemon
     const h11 = document.createElement('h1');
     h11.classList.add("titulo");
@@ -92,24 +88,32 @@ function jogo(json)
 
     //palavra1
     const btn1 = document.createElement('button');
+    btn1.classList.add("resposta1");
+    btn1.value = ordembotoes[0];
     btn1.innerHTML = ordembotoes[0];
     div_btn.appendChild(btn1);
     
 
     //palavra2
     const btn2 = document.createElement('button');
+    btn2.classList.add("resposta2");
+    btn2.value = ordembotoes[1];
     btn2.innerHTML = ordembotoes[1];
     div_btn.appendChild(btn2);
     
 
     //palavra3
     const btn3 = document.createElement('button');
+    btn3.classList.add("resposta3");
+    btn3.value = ordembotoes[2];
     btn3.innerHTML = ordembotoes[2];
     div_btn.appendChild(btn3);
 
     //palavra4
     const btn4 = document.createElement('button');
+    btn4.classList.add("resposta4");
     btn4.innerHTML = ordembotoes[3];
+    btn4.value = ordembotoes[3];
     div_btn.appendChild(btn4);
     
 
@@ -119,11 +123,38 @@ function jogo(json)
     div_jogo.appendChild(div_btn);
     
     
+    var escolha;
+
+    btn1.addEventListener("click", function () {
+        escolha = this.value;
+        verificarResposta(palavra,escolha);
+        /* btn.style.display = "none"; */
+    });
+
+    btn2.addEventListener("click", function () {
+        escolha = this.value;
+        verificarResposta(palavra,escolha);
+        /* btn.style.display = "none"; */
+    });
+
+    btn3.addEventListener("click", function () {
+        escolha = this.value;
+        verificarResposta(palavra,escolha);
+        /* btn.style.display = "none"; */
+    });
+
+    btn4.addEventListener("click", function () {
+        escolha = this.value;
+        verificarResposta(palavra,escolha);
+        /* btn.style.display = "none"; */
+    });
+
 };
 
 
 function verificarResposta(certa, escolha){
 
+    console.log(certa, escolha);
 
 }
 
